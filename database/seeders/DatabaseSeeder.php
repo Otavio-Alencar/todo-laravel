@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,11 +18,11 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
 
         );
-        $this->call(
-            CategorySeeder::class
-        );
-        $this->call(
+
+        Category::factory(5)->create();
+
+        /*$this->call(
             TaskSeeder::class
-        );
+        );*/
     }
 }
